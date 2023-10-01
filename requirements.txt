@@ -1,0 +1,9 @@
+flask~=2.3.3
+pymongo~=4.5.0
+python-dotenv~=1.0.0
+requests~=2.31.0
+schedule~=1.2.0
+selenium~=4.13.0
+
+mongo~=0.2.0
+uri~=2.0.1
