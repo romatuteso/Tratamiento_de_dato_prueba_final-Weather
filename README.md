@@ -23,12 +23,13 @@ Como sabes el clima es un dato que se encuentra en constante cambio, incluso en 
 minuto, pero se puede moficar a que el tiempo este definido de otra forma.
 
 ## Required Modules
-> ### Algunos de los modulos que se utilizo son:
-> - import schedule<p>
-> - import time<p>
-> - from selenium import webdriver
-> - from selenium.webdriver.common.by import By
-> - from mongodb import MongoConnection
+> ### Algúnos de los modulos que se utilizó:
+
+    import schedule
+    import time
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+    from mongodb import MongoConnection
 
 
 ## Data extraction
