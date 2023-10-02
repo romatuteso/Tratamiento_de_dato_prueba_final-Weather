@@ -14,7 +14,7 @@ Por medio de la siguiente imagen podemos ver un poco la estructura de como extra
 
 ## Description
 
-Extracción del clima de [AccuWather](https://www.accuweather.com/) de las ciudades de:
+Extracción del clima de [AccuWeather](https://www.accuweather.com/) de las ciudades de:
 * Guayaquil 
 * Quito y 
 * Cuenca.
@@ -107,5 +107,36 @@ función repetidas veces para que los datos se estén extrayendo automáticament
 -----
 
 -----
+## MongoDB
+
+Con el api.py pudimos lograr extraer datos de la pagina de [AccuWeather](https://www.accuweather.com/)
+de la ciudad de Guayaquil.
+![img.png](Imagenes/img_1.png)
+
+De la siguiente imagen podemos sacar algunos datos importante como:
+* Geoposition
+* Key
+* Region
+* Country
+* Time Zone
+* otros datos adicionales...
+
+![img_1.png](Imagenes/img_2.png)
+
+Con el siguiente codigo podemos sacar datos los datos meteorologicos de una API como ya 
+lo pudimos ver en la imagen de la parte superior.
 
 
+    def get_and_save_data():
+        api_key = "pvz9KfqGkplheifoqWYUwmccrBPPXfu4"
+        url = f"http://dataservice.accuweather.com/locations/v1/129846?apikey={api_key}"
+        response = requests.get(url)
+        data = response.json()
+
+#### Datos importantes:
+
+>**_api_key:_** Llave que se utilizan para autenticar y autorizar el acceso a servicios web, bases de datos u otras aplicaciones en línea.
+
+>**_Key:_** Es una numeración que hace referencia a una locacion de una ciudad, en este caso tenemos en el 
+> ejercicio: **129846** que hace referencia a la ciudad de UIO.
+![img_2.png](Imagenes/img_3.png)
