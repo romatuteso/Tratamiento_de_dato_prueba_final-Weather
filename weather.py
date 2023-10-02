@@ -21,35 +21,35 @@ def extra_clima():
 
         time.sleep(4)
 
-    weather = driver.find_elements(By.CLASS_NAME, "cluster-container")
-    for w in weather:
-        ciudad = w.find_element(by=By.TAG_NAME, value='//h1').text
-        current = w.find_element(by=By.CSS_SELECTOR, value='//a[contains(@class, "cur-con-weather-card")]'
+        weather = driver.find_elements(By.CLASS_NAME, "cluster-container")
+        for driver in weather:
+            ciudad = driver.find_element(by=By.TAG_NAME, value='//h1').text
+            current = driver.find_element(by=By.CSS_SELECTOR, value='//a[contains(@class, "cur-con-weather-card")]'
                                                            '//div[@class="temp"]').text
-        real_feel = w.find_element(by=By.CSS_SELECTOR, value='//a[contains(@class, "cur-con-weather-card")]'
+            real_feel = driver.find_element(by=By.CSS_SELECTOR, value='//a[contains(@class, "cur-con-weather-card")]'
                                                              '//div[@class="real-feel"]').text
 
-        real_feel = real_feel.replace(__old='RealFeel®', __new='').replace(__old='°', __new='').replace(__old='\n', __new='').replace(__old='\t', __new='').replace('\r', '').strip()
-        current = current.replace(__old='°', __new='').replace(__old='\n', __new='').replace(__old='\t', __new='').replace(__old='\r', __new='').strip()
+            real_feel = real_feel.replace(__old='RealFeel®', __new='').replace(__old='°', __new='').replace(__old='\n', __new='').replace(__old='\t', __new='').replace('\r', '').strip()
+            current = current.replace(__old='°', __new='').replace(__old='\n', __new='').replace(__old='\t', __new='').replace(__old='\r', __new='').strip()
 
-        f = open("datos-clima.csv", "a")
-        f.write(f"{ciudad},{current},{real_feel}\n")
-        f.close()
+            f = open("datos-clima.csv", "a")
+            f.write(f"{ciudad},{current},{real_feel}\n")
+            f.close()
 
-        document = {
-            "City": ciudad,
-            "Current": current,
-            "Real Feel": real_feel
-            }
+            document = {
+                "City": ciudad,
+                "Current": current,
+                "Real Feel": real_feel
+                }
 
-        col.insert_one(document=document)
+            col.insert_one(document=document)
 
-        print(ciudad)
-        print(current)
-        print(real_feel)
-        print("\n")
+            print(ciudad)
+            print(current)
+            print(real_feel)
+            print("\n")
 
-    driver.close()
+        driver.close()
 
 
 schedule.every(1).minute.do(extra_clima)
