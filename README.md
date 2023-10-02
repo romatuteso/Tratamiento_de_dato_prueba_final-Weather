@@ -10,7 +10,7 @@
 ## Knowledge
 Por medio de la siguiente imagen podemos ver un poco la estructura de como extraemos datos de la pagiina de AccuWeather.
 
-![img.png](Imagenes/img.png)
+![img_1.png](img_1.png)
 
 ## Description
 
