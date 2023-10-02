@@ -141,4 +141,5 @@ lo pudimos ver en la imagen de la parte superior.
 
 >**_Key:_** Es una numeración que hace referencia a una locacion de una ciudad, en este caso tenemos en el 
 > ejercicio: **129846** que hace referencia a la ciudad de UIO.
-![img_2.png](Imagenes/img_3.png)
+> 
+>![img_2.png](Imagenes/img_3.png)
