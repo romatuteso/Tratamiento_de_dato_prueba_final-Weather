@@ -34,14 +34,15 @@ minuto, pero se puede moficar a que el tiempo este definido de otra forma.
 
 ## Data extraction
 Definimos las url semillas, que en este caso son 3, y que corresponden a las Ciudad de:
-* Guayaquil 
-* Quito y 
-* Cuenca.
+>* Guayaquil 
+>* Quito y 
+>* Cuenca
 
 
     start_urls = ['https://www.accuweather.com/es/ec/guayaquil/127947/weather-forecast/127947',
                   'https://www.accuweather.com/es/ec/quito/129846/weather-forecast/129846',
                   'https://www.accuweather.com/es/ec/cuenca/127442/weather-forecast/127442']
+
 
 Una vez definidas las URL que nos van a servir, accedemos a cada una de ellas. Una por cada 
 iteración. Dentro del for, esperamos unos segundos a que se carguen los datos de la página, para así 
